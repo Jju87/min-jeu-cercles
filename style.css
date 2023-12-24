@@ -1,0 +1,163 @@
+@keyframes rondRouge {
+    0% {rotate: 0deg;}
+    100%{rotate:360deg};
+    
+}
+
+@keyframes rondBleu{
+    
+    0%{ left: 0px; top: 200px;}
+    50%{ left: 200px; top: 200px}
+    75%{ left: 200px; top: 0px;}
+    100%{ left:0px; top: Opx;}
+}
+
+@keyframes rondNoir{
+
+    from{transform: scale(0.3);}
+   to{transform: scale(7);}
+}
+
+
+h1{
+    color:black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;/* 1rem = 10px*/
+}
+body{
+    font-size: 1.4rem;/* soit 14px*/
+    font-family: arial;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to top, pink,grey);
+    overflow: hidden;
+    align-items: center;
+}
+
+
+#btn-red{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation-name: rondRouge;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    position: relative;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+    transform-origin: 100px 100px;
+    animation-fill-mode: forwards;
+
+
+}
+#btn-red:active{
+    background-color: green;
+}
+
+h1 .red{
+    color:red;
+}
+h1 .blue{
+    color:blue;
+}
+#titre{
+    text-align: center;
+    height:50px;
+    transform: translateY(-150px);
+
+}
+
+#btn-black{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation: rondNoir ease 2s infinite alternate;
+    
+}
+#btn-black:active{
+    background-color: red;
+}
+#jamais{
+    height:50px;
+    transform: translateY(-120px);
+
+}
+#btn-blue{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation-name: rondBleu;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    position: relative;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+    transform: translateY(-200px);
+
+
+}
+#btn-blue:active{
+    background-color: green;
+}
+#over{
+    margin: auto;
+    display: block;
+    width:70vw;
+    border-radius: 20px;
+    padding: 20px;
+    display: none;
+    text-align:center;
+    background-color: transparent;
+    font-size: 2.3em;
+    transition: 300ms ease;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.rejouer{
+    width: 30vw;
+    height: 15vh;
+    margin: auto;
+    color: white;
+    background-color: grey;
+    border-radius: 20px;
+    font-size: 1.7em;
+    display: none;
+    text-align: center;
+    line-height: 14vh;
+    transition: 300ms ease;
+    padding: 5px;
+    
+
+}
+.rejouer:hover{
+    background-color: transparent;
+    color: black;
+    font-weight: bolder;
+}
+.rejouer:hover + #over{
+    background-color: transparent !important;
+
+}
+.rejouer:active{
+    transform: translateY(4px);
+}
+
+img{
+    width: 300px;
+    height:300px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
